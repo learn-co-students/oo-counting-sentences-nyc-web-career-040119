@@ -16,8 +16,7 @@ class String
 
   def count_sentences
     keep_count = 0
-    arr = self.split(' ')#.each_with_index { |word| word == sentence? || question? || exclamation? }
-    arr.each do |word|
+    self.split(' ').each do |word|
       if word.end_with?(".") || word.end_with?("?") || word.end_with?("!")
         keep_count += 1
       end
